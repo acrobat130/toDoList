@@ -4,12 +4,11 @@
 
 //create empty array to hold toDoList items
 var toDoList = [];
-var toDoListLength = toDoList.length;
-
 
 //function to insert toDoList array into HTML
 function appendItem() {
-	for(i = 0; i < toDoListLength; i++) {
+	for(var i = 0; i < toDoListLength; i++) {
+		var toDoListLength = toDoList.length;
 		//create new li tag
 		var newLine = document.createElement('li');
 		//add toDoListItem text to new p tag
