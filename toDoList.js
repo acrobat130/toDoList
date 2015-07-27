@@ -6,16 +6,29 @@
 var toDoList = [];
 
 //function to insert toDoList array into HTML
+
+/*
+
 function appendItem() {
-	for(var i = 0; i < toDoListLength; i++) {
-		var toDoListLength = toDoList.length;
+	for(var item in toDoList) {
+		
 		//create new li tag
 		var newLine = document.createElement('li');
 		//add toDoListItem text to new p tag
-		newLine.innerHTML = toDoList[i];
+		newLine.innerHTML = toDoList[item];
 		//append p tag with text to the list
 		document.getElementById('list').appendChild(newLine);
 	};
+};
+
+*/
+function appendItem(item) {
+		//create new li tag
+			var newLine = document.createElement('li');
+			//add toDoListItem text to new p tag
+			newLine.innerHTML = item;
+			//append p tag with text to the list
+			document.getElementById('list').appendChild(newLine);
 };
 
 //after window loads, run scripts
@@ -25,7 +38,7 @@ window.onload = function() {
 		var toDoListItem = prompt('What do you want to add?');
 		//add new toDoListItem to array
 		toDoList.push(toDoListItem);
-		appendItem();
+		appendItem(toDoListItem);
 	};
 	
 };
